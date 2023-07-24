@@ -8,7 +8,7 @@ All the data could find by the link in the paper.
 
 ### Reachability Query:
 
-Our methods are shown in code. 
+Our methods are shown in Reachability Query. 
 
 P2H+ could be found in [GitHub - unswpy/Answering-BillionScale-LabelConstrained-Reachability-Queries-within-Microsecond](https://github.com/unswpy/Answering-BillionScale-LabelConstrained-Reachability-Queries-within-Microsecond)
 
@@ -16,4 +16,4 @@ ARRIVAL and BBFS could be found in https://github.com/idea-iitd/ARRIVAL.
 
 ### Enumeration Query:
 
-All the codes are shown in code.
+All the codes are shown in Enumeration Query.
