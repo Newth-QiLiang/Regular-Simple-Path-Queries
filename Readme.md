@@ -1,18 +1,21 @@
 # Regular Simple Path Queries under Transitive Restricted Expressions
 
+## Introduction
+
+
 ## Data Source:
 
-All the data could find by the link in the paper.
+The link in the paper could find all the data.
 
 ## Code:
 
 ### Reachability Query:
 
-Our methods are shown in Reachability Query. 
+Our methods are shown in the Reachability Query. 
 
 P2H+ could be found in [GitHub - unswpy/Answering-BillionScale-LabelConstrained-Reachability-Queries-within-Microsecond](https://github.com/unswpy/Answering-BillionScale-LabelConstrained-Reachability-Queries-within-Microsecond)
 
-ARRIVAL and BBFS could be found in https://github.com/idea-iitd/ARRIVAL.
+ARRIVAL and BBFS can be found at https://github.com/idea-iitd/ARRIVAL.
 
 ### Enumeration Query:
 
