@@ -5,7 +5,7 @@ There are two fundamental problems in regular simple path queries (RSPQs). One i
 
 ## Data Source:
 
-The link in the paper could find all the data.
+The link in the paper could find all the data. Note that the data type should be "vertex1, vertex2, label".
 
 ## Code:
 
@@ -20,3 +20,13 @@ ARRIVAL and BBFS can be found at https://github.com/idea-iitd/ARRIVAL.
 ### Enumeration Query:
 
 All the codes are shown in Enumeration Query.
+
+To compile: g++ -std=c++11 -O3 {name}.cpp
+
+To run: ./a.out {path/to/dataset/edges.txt} {path/to/dataset/query.txt} {path/to/dataset/result.txt} 
+
+The dataset folder should contain:
+
+edge file (edges.txt) (each line of the form u v l, where there is an edge from u to v with a label l)
+query file (the source vertex, the target vertex, the regular expression) 
+result file (record the final result, such as reachability information and enumeration results).
