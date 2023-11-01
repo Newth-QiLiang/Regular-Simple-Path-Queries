@@ -5,9 +5,11 @@ There are two fundamental problems in regular simple path queries (RSPQs). One i
 
 ## Data Source:
 
-The link in the paper could find all the data. Note that the data type should be "vertex1, vertex2, label".
+The link in the paper could find all the data. The data type should be "vertex1, vertex2, label".
 
 ## Code:
+
+use the command “ulimit -s 102400” to increase the space of the stack.
 
 ### Reachability Query:
 
@@ -28,5 +30,9 @@ To run: ./a.out {path/to/dataset/edges.txt} {path/to/dataset/query.txt} {path/to
 The dataset folder should contain:
 
 edge file (edges.txt) (each line of the form u v l, where there is an edge from u to v with a label l)
+
 query file (the source vertex, the target vertex, the regular expression) 
+
 result file (record the final result, such as reachability information and enumeration results).
+
+
