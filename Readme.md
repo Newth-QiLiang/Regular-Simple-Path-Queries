@@ -5,10 +5,36 @@ There are two fundamental problems in regular simple path queries (RSPQs). One i
 
 ## Data Source:
 
-The Wikidata (WD) are available here: http://compact-leapfrog.tk/files/wikidata-enumerated.dat.gz
+Wikidata (WD) is available here: http://compact-leapfrog.tk/files/wikidata-enumerated.dat.gz
 
+Youtube (YT) is available here: [Social Computing Data Repository at ASU - YouTube Dataset (syr.edu)](http://datasets.syr.edu/datasets/YouTube.html)
 
-The link in the paper could find all the data. The data type should be "vertex1, vertex2, label".
+StackOverflow is availabel here: [SNAP: Network datasets: Stack Overflow temporal network (stanford.edu)](https://snap.stanford.edu/data/sx-stackoverflow.html)
+
+StringsFC is available here: [Downloads - STRING functional protein association networks (string-db.org)](https://cn.string-db.org/cgi/download?sessionId=bWejWJrlm8uz&species_text=felis+catus)
+
+StringsHS is available here: [Downloads - STRING functional protein association networks (string-db.org)](https://cn.string-db.org/cgi/download?sessionId=bWejWJrlm8uz&species_text=homo+sapiens)
+
+NotreDame is available here: [SNAP: Network datasets: Notre Dame web graph (stanford.edu)](https://snap.stanford.edu/data/web-NotreDame.html)
+
+Stanford is available here: [SNAP: Network datasets: Stanford web graph](https://snap.stanford.edu/data/web-Stanford.html)
+
+Google is available here: [SNAP: Network datasets: Google web graph (stanford.edu)](https://snap.stanford.edu/data/web-Google.html)
+
+Friendster is available here: [SNAP: Network datasets: Friendster social network (stanford.edu)](https://snap.stanford.edu/data/com-Friendster.html)
+
+Rec-dating is available here: [dating | Recommendation Networks | Network Data Repository (networkrepository.com)](https://networkrepository.com/rec-dating.php)
+
+Zhishihudong is available here: [zhishi-hudong-relatedpages | Miscellaneous Networks | Network Data Repository (networkrepository.com)](https://networkrepository.com/zhishi-hudong-relatedpages.php)
+
+The graph file need to follow this rule:
+
+1. The first line is two integers: <nodeNum, labelNum>
+2. The next EdgeNum lines' format: <sourceID, targetID, labelID>
+3. Vertex ID is [1, N]
+4. Label ID is [0, labelNum)
+
+Some example graphs (such as Advogato) are in the "Datasets" folder. 
 
 ## Code:
 
@@ -18,13 +44,13 @@ use the command “ulimit -s 102400” to increase the space of the stack.
 
 Our methods are shown in the Reachability Query. 
 
-P2H+ could be found in [GitHub - unswpy/Answering-BillionScale-LabelConstrained-Reachability-Queries-within-Microsecond](https://github.com/unswpy/Answering-BillionScale-LabelConstrained-Reachability-Queries-within-Microsecond)
-
 ARRIVAL and BBFS can be found at https://github.com/idea-iitd/ARRIVAL.
 
 ### Enumeration Query:
 
 All the codes are shown in Enumeration Query.
+
+### Run our data:
 
 To compile: g++ -std=c++11 -O3 {name}.cpp
 
@@ -37,5 +63,4 @@ edge file (edges.txt) (each line of the form u v l, where there is an edge from 
 query file (the source vertex, the target vertex, the regular expression) 
 
 result file (record the final result, such as reachability information and enumeration results).
-
 
