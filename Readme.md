@@ -5,6 +5,9 @@ There are two fundamental problems in regular simple path queries (RSPQs). One i
 
 ## Data Source:
 
+The Wikidata （WD） are available here: http://compact-leapfrog.tk/files/wikidata-enumerated.dat.gz
+
+
 The link in the paper could find all the data. The data type should be "vertex1, vertex2, label".
 
 ## Code:
