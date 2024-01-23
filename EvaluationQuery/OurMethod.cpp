@@ -418,8 +418,8 @@ int main(int argc, char* argv[]){
     string edgeFile = argv[1];
     // string edgeFile = "/home/liangqi/Projects/QiLiang/RSPQ/Datasets/AD/advogato";
     
-    // string queryFile = argv[2];
-    // string resultFile = argv[3];
+    string queryFile = argv[2];
+    string resultFile = argv[3];
     //string memoryfile = argv[4];
 
     ReadData(edgeFile);//read data;
@@ -428,11 +428,13 @@ int main(int argc, char* argv[]){
     cout<<"edge number: " << numEdge << endl;
     cout<<"label number: " << labelNum << endl;
 
-    for(int type = 5; type < 7; type++){
-        string queryFile = edgeFile + "_evaluation_Q" + to_string(type) + ".query";
-        string resultFile = edgeFile + "_evaluation_Q" + to_string(type) + "_OurMethod.time.result";
-        RunBBFS(queryFile,resultFile);
-    }
+    // for(int type = 5; type < 7; type++){
+    //     string queryFile = edgeFile + "_evaluation_Q" + to_string(type) + ".query";
+    //     string resultFile = edgeFile + "_evaluation_Q" + to_string(type) + "_OurMethod.time.result";
+    //     RunBBFS(queryFile,resultFile);
+    // }
+
+    RunBBFS(queryFile,resultFile);
 
     return 0;
 }

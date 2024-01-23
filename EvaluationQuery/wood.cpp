@@ -296,33 +296,56 @@ int main(int argc, char* argv[]){
 
     cout << "finish read graph!" << endl;
 
-    // string queryFile = argv[2];
-    // string resultFile = argv[3];
-    for(int type = 5; type < 7; type++){
-        string queryFile = edgefile + "_evaluation_Q" + to_string(type) + ".query";
-        string resultFile = edgefile + "_evaluation_Q" + to_string(type) + "_Wood.time.result";
+    string queryFile = argv[2];
+    string resultFile = argv[3];
 
-        ofstream s;
-        s.open(resultFile.c_str(),ios::out);
+    // for(int type = 5; type < 7; type++){
+    //     string queryFile = edgefile + "_evaluation_Q" + to_string(type) + ".query";
+    //     string resultFile = edgefile + "_evaluation_Q" + to_string(type) + "_Wood.time.result";
 
-        ifstream query;
-        query.open(queryFile.c_str());
+    //     ofstream s;
+    //     s.open(resultFile.c_str(),ios::out);
 
-        string line;
-        vector<string> temp;
-        int i = 0;//queryNumber;
-        while(getline(query,line)){
-            temp = Split(line,' ');
-            string regex = temp[0];
-            i++;
-            init();
-            TC.update();
-            wood(regex);
-            double time = TC.getTimerSecond();
-            s << i << " " << resultNumber << " " << time << endl;
-        }
-        query.close();
-        s.close();
+    //     ifstream query;
+    //     query.open(queryFile.c_str());
+
+    //     string line;
+    //     vector<string> temp;
+    //     int i = 0;//queryNumber;
+    //     while(getline(query,line)){
+    //         temp = Split(line,' ');
+    //         string regex = temp[0];
+    //         i++;
+    //         init();
+    //         TC.update();
+    //         wood(regex);
+    //         double time = TC.getTimerSecond();
+    //         s << i << " " << resultNumber << " " << time << endl;
+    //     }
+    //     query.close();
+    //     s.close();
+    // }
+
+    ofstream s;
+    s.open(resultFile.c_str(),ios::out);
+
+    ifstream query;
+    query.open(queryFile.c_str());
+
+    string line;
+    vector<string> temp;
+    int i = 0;//queryNumber;
+    while(getline(query,line)){
+        temp = Split(line,' ');
+        string regex = temp[0];
+        i++;
+        init();
+        TC.update();
+        wood(regex);
+        double time = TC.getTimerSecond();
+        s << i << " " << resultNumber << " " << time << endl;
     }
+    query.close();
+    s.close();
     return 0;
 }
