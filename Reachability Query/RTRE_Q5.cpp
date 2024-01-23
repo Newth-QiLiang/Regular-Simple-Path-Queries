@@ -177,9 +177,9 @@ int main(int argc, char* argv[]){
     // string queryFile = edgeFile + "_enum.query";
     // string resultFile = edgeFile + "_enum_Base.result";
 
-    // string queryFile = argv[2];
-    // string resultFile = argv[3];
-    //string memoryfile = argv[4];
+    string queryFile = argv[2];
+    string resultFile = argv[3];
+    string memoryfile = argv[4];
 
     ReadData(edgeFile);//read data;
     cout<<"node number: " << numNode << endl;
@@ -195,9 +195,9 @@ int main(int argc, char* argv[]){
 
     // RunBBFS(queryFile,resultFile,memoryFile);
 
-    string queryFile = edgeFile + "_Reach_Q" + to_string(5) + "_bbfs.query";
-    string resultFile = edgeFile + "_Reach_Q" + to_string(5) + "_DFS.time.result";
-    string memoryFile = edgeFile + "_Reach_Q" + to_string(5) + "_DFS.memory.result";
+    // string queryFile = edgeFile + "_Reach_Q" + to_string(5) + "_bbfs.query";
+    // string resultFile = edgeFile + "_Reach_Q" + to_string(5) + "_DFS.time.result";
+    // string memoryFile = edgeFile + "_Reach_Q" + to_string(5) + "_DFS.memory.result";
 
     RunBBFS(queryFile,resultFile,memoryFile);
 

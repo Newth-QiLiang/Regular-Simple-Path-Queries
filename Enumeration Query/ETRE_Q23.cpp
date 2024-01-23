@@ -405,11 +405,52 @@ int main(int argc, char* argv[]){
     cout<<"node number: " << numNode << endl;
     cout<<"label number: " << labelNum << endl;
 
-    for(int type = 2; type < 4; type++){
+        // for(int type = 2; type < 4; type++){
 
-    string queryFile = edgeFile + "_Enum_Q" + to_string(type) + ".query";
-    string resultFile = edgeFile + "_Enum_Q" + to_string(type) + "_ETRE.time.result";
-    string memoryFile = edgeFile + "_Enum_Q" + to_string(type) + "_ETRE.memory.result";
+        // string queryFile = edgeFile + "_Enum_Q" + to_string(type) + ".query";
+        // string resultFile = edgeFile + "_Enum_Q" + to_string(type) + "_ETRE.time.result";
+        // string memoryFile = edgeFile + "_Enum_Q" + to_string(type) + "_ETRE.memory.result";
+
+        // ifstream query;
+        // //query form : start end regex;
+        // query.open(queryFile.c_str());
+
+        // ofstream s;
+        // s.open(resultFile.c_str(),ios::out);
+
+        // ofstream s_m;
+        // s_m.open(memoryFile.c_str(),ios::out);
+
+        // string line;
+        // vector<string> temp;
+        // int i = 0;
+        // while(getline(query,line)){
+        //     temp = Split(line,' ');
+        //     long long src = stoll(temp[0]);
+        //     long long dst = stoll(temp[1]);
+        //     string regex = temp[2];
+        //     i++;
+        //     // cout << src << " " << dst << " " << regex << endl;
+        //     initialize_vector();
+        //     ETRE(src,dst,regex);
+        //     double time = TC.getTimerMilliSec();
+        //     //outputResult(resultFile,i);
+        //     //ResultTime(TimeFile,time,i,bfs_time);
+        //     // cout << i << " " << resultNumber << " " << time << endl;
+        //     s << i << " " << resultNumber << " " << time << endl;
+        //     clear_vector();
+        // }
+        // query.close();
+        // s.close();
+        // s_m.close();
+
+        // }
+
+
+
+    string queryFile = argv[2];
+    string resultFile = argv[3];
+    string memoryFile = argv[4];
 
     ifstream query;
     //query form : start end regex;
@@ -444,6 +485,6 @@ int main(int argc, char* argv[]){
     s.close();
     s_m.close();
 
-    }
+
     return 0;
 }

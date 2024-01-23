@@ -54,15 +54,17 @@ All the codes are shown in Enumeration Query.
 
 To compile: g++ -std=c++11 -O3 {name}.cpp
 
-To run: ./a.out {path/to/dataset/edges.txt} {path/to/dataset/query.txt} {path/to/dataset/result.txt} 
+To run: ./a.out {path/to/dataset/edges.txt} {path/to/dataset/query.txt} {path/to/dataset/result.txt} {path/to/dataset/memory.txt}
+
+You can change the main function to adjust to different input and output. You can use different code to answer different type of regular path queries (e.g., RTRE_Q14 for Query type 1 and type 4. We omit ETRE_Q5 since it is same as Baseline). We also show an example of our query file in folder "Example". 
 
 The dataset folder should contain:
 
-edge file (edges.txt) (each line of the form u v l, where there is an edge from u to v with a label l)
+Edge file (edges.txt) (each line of the form u v l, where there is an edge from u to v with a label l)
 
-query file (the source vertex, the target vertex, the regular expression) 
+Query file (the source vertex, the target vertex, the regular expression)
 
-result file (record the final result, such as reachability information and enumeration results).
+Result file (record the final result, such as reachability information and enumeration results).
 
-We also show an example of our query file in folder "Example".
+Memory file (record the memory requirment)
 

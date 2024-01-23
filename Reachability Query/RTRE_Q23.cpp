@@ -418,9 +418,9 @@ int main(int argc, char* argv[]){
     string edgeFile = argv[1];
     // string edgeFile = "/home/liangqi/Projects/QiLiang/RSPQ/Datasets/AD/advogato";
     
-    // string queryFile = argv[2];
-    // string resultFile = argv[3];
-    //string memoryfile = argv[4];
+    string queryFile = argv[2];
+    string resultFile = argv[3];
+    string memoryfile = argv[4];
 
     ReadData(edgeFile);//read data;
     cout<<"finishing reading data"<< endl;
@@ -428,15 +428,15 @@ int main(int argc, char* argv[]){
     cout<<"edge number: " << numEdge << endl;
     cout<<"label number: " << labelNum << endl;
     
-    for(int type = 2; type < 4; type++){
-        string queryFile = edgeFile + "_Reach_Q" + to_string(type) + "_bbfs.query";
-        string resultFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS.time.result";
-        string memoryFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS.memory.result";
+    // for(int type = 2; type < 4; type++){
+    //     string queryFile = edgeFile + "_Reach_Q" + to_string(type) + "_bbfs.query";
+    //     string resultFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS.time.result";
+    //     string memoryFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS.memory.result";
 
-        // string queryFile = edgeFile + "_bbfs_Q" + to_string(type) + "_true.query";
-        // string resultFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS_true.result";
-        RunBBFS(queryFile,resultFile,memoryFile);
-    }
+    //     // string queryFile = edgeFile + "_bbfs_Q" + to_string(type) + "_true.query";
+    //     // string resultFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS_true.result";
+    //     RunBBFS(queryFile,resultFile,memoryFile);
+    // }
 
     // RunBBFS(queryFile,resultFile);
     //ResultMemory(memoryfile);
@@ -464,6 +464,8 @@ int main(int argc, char* argv[]){
     // }
     // query.close();
     // s.close();
+
+    RunBBFS(queryFile,resultFile,memoryFile);
 
     return 0;
 }

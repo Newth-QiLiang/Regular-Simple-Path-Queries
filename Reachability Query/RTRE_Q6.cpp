@@ -294,13 +294,13 @@ int RSPRQ(int src, int dst, string regex){
 
 int main(int argc, char* argv[]){
 
-    // string edgeFile = argv[1];
-    // string queryFile = argv[2];
-    // string resultFile = argv[3];
+    string edgeFile = argv[1];
+    string queryFile = argv[2];
+    string resultFile = argv[3];
 
-    string edgeFile = "/home/liangqi/Projects/QiLiang/RSPQ/Datasets/AD/advogato";
-    string queryFile = "/home/liangqi/Projects/QiLiang/RSPQ/Code/Data/AD/advogato_reach.query";
-    string resultFile = "/home/liangqi/Projects/QiLiang/RSPQ/Code/Data/AD/advogato_reach.result";
+    // string edgeFile = "/home/liangqi/Projects/QiLiang/RSPQ/Datasets/AD/advogato";
+    // string queryFile = "/home/liangqi/Projects/QiLiang/RSPQ/Code/Data/AD/advogato_reach.query";
+    // string resultFile = "/home/liangqi/Projects/QiLiang/RSPQ/Code/Data/AD/advogato_reach.result";
 
     ReadData(edgeFile);//read data;
     cout<<"node number: " << numNode << endl;

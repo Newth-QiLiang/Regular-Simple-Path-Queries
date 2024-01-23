@@ -283,16 +283,17 @@ int main(int argc, char* argv[]){
     cout<<"edge number: " << numEdge << endl;
     cout<<"label number: " << labelNum << endl;
 
-    for(int type = 1; type < 7; type++){
-        if(type == 1 || type == 4){
-            string queryFile = edgeFile + "_Reach_Q" + to_string(type) + "_bbfs.query";
-            string resultFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS.time.result";
-            string memoryFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS.memory.result";
-            // string queryFile = edgeFile + "_bbfs_Q" + to_string(type) + "_true.query";
-            // string resultFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS_true.result";
-            RunBBFS(queryFile,resultFile,memoryFile);
-        }
-    }
+
+    // for(int type = 1; type < 7; type++){
+    //     if(type == 1 || type == 4){
+    //         string queryFile = edgeFile + "_Reach_Q" + to_string(type) + "_bbfs.query";
+    //         string resultFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS.time.result";
+    //         string memoryFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS.memory.result";
+    //         // string queryFile = edgeFile + "_bbfs_Q" + to_string(type) + "_true.query";
+    //         // string resultFile = edgeFile + "_Reach_Q" + to_string(type) + "_BBFS_true.result";
+    //         RunBBFS(queryFile,resultFile,memoryFile);
+    //     }
+    // }
 
     // string queryFile = "/home/liangqi/Projects/QiLiang/RSPQ/Datasets/SO/stackoverflow_Type_bbfs.query";
     // string resultFile = "/home/liangqi/Projects/QiLiang/RSPQ/Datasets/SO/stackoverflow_Reach_Q6_BBFS.time.result";
@@ -300,10 +301,11 @@ int main(int argc, char* argv[]){
     // RunBBFS(queryFile,resultFile,memoryFile);
 
     
-    // string queryFile = argv[2];
-    // string resultFile = argv[3];
-    //string memoryfile = argv[4];
+    string queryFile = argv[2];
+    string resultFile = argv[3];
+    string memoryfile = argv[4];
 
-    //ResultMemory(memoryfile);
+    RunBBFS(queryFile,resultFile,memoryFile);
+
     return 0;
 }
