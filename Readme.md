@@ -64,3 +64,5 @@ query file (the source vertex, the target vertex, the regular expression)
 
 result file (record the final result, such as reachability information and enumeration results).
 
+We also show an example of our query file in folder "Example".
+
