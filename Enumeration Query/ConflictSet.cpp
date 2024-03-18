@@ -45,13 +45,13 @@ queue<pair<int,int> > Q;
 
 
 vector<string> Split(const string& s, const char delim = '\t') {
-	vector<string> elements;
-	stringstream ss(s);
-	string item;
-	while (getline(ss, item, delim)) {
-		elements.push_back(item);
-	}
-	return elements;
+    vector<string> elements;
+    stringstream ss(s);
+    string item;
+    while (getline(ss, item, delim)) {
+        elements.push_back(item);
+    }
+    return elements;
 }
 
 bool pathConflict(int node, int state){
@@ -64,11 +64,14 @@ bool pathConflict(int node, int state){
 }
 
 void update_conflictSet(int node,int state){
-    //type:父节点的冲突集合为子节点冲突集合、探索过程中自己的冲突集合的交集;
     //note:忽略不可达的子节点;
     int number = 0;
     vector<int> setTemp;
     unordered_set<int> temp;
+    if(conflictSetUnion[node][state].size() > 1){
+        conflictSetUnion[node][state].clear();
+        return;
+    }
     for(auto it = graph[node].begin();it != graph[node].end();it++){
         int nextnode = it->toNode;
         if(dfa.labelToState[state].count(it->label)){
@@ -78,6 +81,10 @@ void update_conflictSet(int node,int state){
                     setTemp.push_back(nextnode);
                     number++;
                 }else{
+                    if(conflictSet[nextnode][nextstate].size() == 0){
+                        conflictSetUnion[node][state].clear();
+                        return;
+                    }
                     number++;
                     for(auto it1 = conflictSet[nextnode][nextstate].begin();it1 != conflictSet[nextnode][nextstate].end();it1++){
                         setTemp.push_back(*it1);
@@ -101,6 +108,7 @@ void update_conflictSet(int node,int state){
             }
         }
     }
+    conflictSetUnion[node][state].clear();
     setTemp.clear();
     temp.clear();
 }
